@@ -56,7 +56,7 @@ export default async function Dashboard() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Precio ($)</label>
                 {/* min="0" previene números negativos en la interfaz */}
-                <input type="number" name="price" required min="0" step="0.01" className="w-full border p-3 rounded-xl outline-none" />
+                <input type="number" name="price" required min="0" step="5" className="w-full border p-3 rounded-xl outline-none" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Stock (Cantidad)</label>
