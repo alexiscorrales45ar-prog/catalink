@@ -49,30 +49,28 @@ export default async function Dashboard() {
           <form action={addProduct} className="flex flex-col gap-5">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">Nombre</label>
-              <input type="text" name="name" required className="w-full border p-3 rounded-xl outline-none" />
+              <input type="text" name="name" required className="w-full border p-3 rounded-xl outline-none text-black bg-white" />
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Precio ($)</label>
-                {/* min="0" previene números negativos en la interfaz */}
-                <input type="number" name="price" required min="0" step="5" className="w-full border p-3 rounded-xl outline-none" />
+                <input type="number" name="price" required min="0" step="0.01" className="w-full border p-3 rounded-xl outline-none text-black bg-white" />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Stock (Cantidad)</label>
-                <input type="number" name="stock" required min="0" defaultValue="10" className="w-full border p-3 rounded-xl outline-none" />
+                <input type="number" name="stock" required min="0" defaultValue="10" className="w-full border p-3 rounded-xl outline-none text-black bg-white" />
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">Descripción</label>
-              <textarea name="description" required className="w-full border p-3 rounded-xl outline-none" rows="2"></textarea>
+              <textarea name="description" required className="w-full border p-3 rounded-xl outline-none text-black bg-white" rows="2"></textarea>
             </div>
 
-            {/* INPUT DE TIPO ARCHIVO (FOTO) */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">Subir Foto Real</label>
-              <input type="file" name="imageFile" accept="image/*" required className="w-full border p-3 rounded-xl outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+              <input type="file" name="imageFile" accept="image/*" required className="w-full border p-3 rounded-xl outline-none text-black bg-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
             </div>
             
             <button type="submit" className="w-full bg-black text-white p-3.5 rounded-xl font-bold hover:bg-gray-800 mt-2">
